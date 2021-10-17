@@ -50,7 +50,15 @@ html {
 	text-shadow: 2rem 2rem 4rem #aaa;
 }
 
-
 /*=============================================
-               
+               keyframes
 ================================================*/
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
