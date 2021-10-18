@@ -38,3 +38,30 @@ $(document).ready(function () {
 		document.documentElement.scrollTop = 0;
 	}
 });
+/*=============================================
+            smooth scroll
+================================================*/
+$(document).ready(function () {
+	
+	$('.navbar-link, #scroll-btn').on(
+		'click',
+		function (event) {
+			if (this.hash !== '') {
+				event.preventDefault();
+
+				// Store hash
+				let hash = this.hash;
+
+				$('html, body').animate(
+					{
+						scrollTop: $(hash).offset().top,
+					},
+					1000,
+					function () {
+						window.location.hash = hash;
+					}
+				);
+			}
+		}
+	);
+})
