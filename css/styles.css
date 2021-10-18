@@ -661,26 +661,6 @@ html {
 /*=============================================
             media queries
 ================================================*/
-/*tablet landscape and desktop layout (960px or more) */
-@media only screen and (min-width: 960px) {
-	/*...tablet landscape and desktop styles */
-}
-
-/*table portrait layout (768px to 959px) */
-@media only screen and (max-width: 959px) {
-	/*... tablet portrait styles */
-}
-
-/*mobile landscape layout (480px to 767px) */
-@media only screen and (max-width: 767px) {
-	/*...mobile landscape styles */
-}
-
-/*mobile portrait layout (479px or less) */
-@media only screen and (max-width: 479px) {
-	/*...mobile portrait styles */
-}
-
 @media (max-width: 1400px) {
 	.floating-bg {
 		top: -120vw;
