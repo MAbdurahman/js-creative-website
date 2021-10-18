@@ -838,6 +838,7 @@ html {
 
 	.section-4 {
 		height: auto;
+		padding-bottom: 3rem;
 	}
 
 	.form-container {
@@ -857,7 +858,7 @@ html {
 	}
 
 	.copyright {
-		font-size: 1.8rem;
+		font-size: 1.2rem;
 		margin: 5rem;
 		text-align: center;
 	}

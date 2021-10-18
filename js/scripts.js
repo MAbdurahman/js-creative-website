@@ -10,13 +10,32 @@ $(document).ready(function () {
 		});
 	});
 
-	/*=============================================
-               scroll button
-   ================================================*/
+	/*================================================
+         smooth for scroll button
+   ===================================================*/
 	//Get the button
 	let scrollButton = document.getElementById('scroll-btn');
-   scrollButton.addEventListener('click', topFunction);
-	// When the user scrolls down 20px from the top of the document, show the button
+	// When the user clicks on the button, scroll to the top of the document
+	scrollButton.addEventListener('click', function (event) {
+		if (this.hash !== '') {
+			event.preventDefault();
+
+			// Store hash
+			let hash = this.hash;
+
+			$('html, body').animate(
+				{
+					scrollTop: $(hash).offset().top,
+				},
+				1000,
+				function () {
+					window.location.hash = hash;
+				}
+			);
+		}
+	});
+
+	// When the user scrolls down 250px from the top of the document, show the button
 	window.onscroll = function () {
 		scrollFunction();
 	};
@@ -31,15 +50,9 @@ $(document).ready(function () {
 			scrollButton.style.display = 'none';
 		}
 	}
-
-	// When the user clicks on the button, scroll to the top of the document
-	function topFunction() {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}
 });
 /*=============================================
-            smooth scroll
+   smooth scroll for navbar anchor tags
 ================================================*/
 $(document).ready(function () {
 	
